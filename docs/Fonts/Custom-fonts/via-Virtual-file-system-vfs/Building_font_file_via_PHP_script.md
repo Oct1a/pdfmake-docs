@@ -1,6 +1,7 @@
-For a complete description of use custom fonts in client-side, read the article: Custom fonts (client-side) > via Virtual file system (VFS)
+## 关于在客户端使用自定义字体的完整描述，请阅读这篇文章。
 
-If you don’t want to install gulp and/or just downloaded pdfMake and want to use custom fonts in client-side, you can generate the vfs_fonts.js with an PHP script as well. Put the code below in a file on a server with the font files you want to include in the same directory and view it in a browser. Use parameter “?tofile” in the URL to write the output to “vfs_fonts.js” in the same directory on the server, otherwise it outputs in the browser window for you to copy/paste.
+如果你不想去安装gulp或刚刚下载了pdfMake 想在客户端使用自定义字体, 你可以创建一个vfs_fonts.js 也是可以用PHP脚本来实现的。<br>
+把下面的代码放在服务器上的一个文件中，与你想引入的字体文件放在同一个目录中，然后在浏览器中查看. 使用参数 `?tofile` 在URL中写入输出到服务器上同一目录下的 `"vfs_fonts.js"`，否则会在浏览器窗口中输出，供你复制/粘贴。
 
 ```php
 <?php

@@ -1,6 +1,6 @@
-For a complete description of use custom fonts in client-side, read the article: Custom fonts (client-side) > via Virtual file system (VFS)
+## 关于在客户端使用自定义字体的完整描述，请阅读这篇文章
 
-If you don’t want to install gulp and/or just downloaded pdfMake and want to use custom fonts in client-side, you can generate the vfs_fonts.js with an bash-script as well:
+如果你不想安装gulp 或者刚刚下载了pdfMake，想在客户端使用自定义字体，你也可以用`bash-script`生成`vfs_fonts.js`。
 
 ```sh
 #!/bin/sh
@@ -27,15 +27,17 @@ fi
 ) > "$target"
 ```
 
-How to use script:
+如何使用脚本:
 
+```sh
 script.sh font1.ttf font2.ttf font3.ttf
-If you are using a mac you need to change this line
+```
+如果你使用的是Mac，你需要修改这一行
 ```sh
 		filecontent=$(base64 -w 0 $file)
 ```
-to (change the flag from -w to -b)
+将`-w` 更改为`-b`
 ```sh
 		filecontent=$(base64 -b 0 $file)
 ```
-GNU coreutils' base64 seems to differ to Apple’s base64 in this flag (which prevents line wrapping).
+GNU coreutils的base64似乎与苹果的base64不同，它有一个参数（防止换行的）。

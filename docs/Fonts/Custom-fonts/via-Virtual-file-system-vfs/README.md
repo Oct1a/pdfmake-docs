@@ -1,36 +1,37 @@
-!> This article is only for client-side usage (in browser)! For server-side use real font files.
+!> 本文只针对浏览器客户端使用! 对于服务器端需使用真实的字体文件。.
 
-?> Minimal version: 0.1.72 Files are compatible. For older versions use gulp.
-## TL;DR 
-pdfmake uses a 2nd file: vfs_fonts.js for fonts (and other files) you wish to embed into your generated PDFs.
+?> 最低版本: 0.1.72 文件是兼容的。对于旧版本，使用gulp.
+## ~~TL;DR(太长了，可以不用看)~~
+~~pdfmake使用第二个文件：vfs_fonts.js，用于将字体（和其他文件）嵌入到你生成的PDF中。.~~
 
-When you run command node build-vfs.js "./examples/fonts" in the pdfmake package directory a new build/vfs_fonts.js file is created containing an embedded copy of all files from the local examples/fonts subdirectory (in a key/value object pdfMake.vfs).
+~~当你运行命令 `node build-vfs.js "./examples/fonts"` 在pdfmake软件包目录下会创建一个新的 `build/vfs_fonts.js`文件,其中包含本地examples/fonts子目录下所有文件的嵌入式拷贝（在一个键/值对象pdfMake.vfs中）。~~
 
-## Detailed Instructions
-To use custom fonts, 3 steps are required:
+## 详细说明
+要使用自定义字体，需要3个步骤:
 
-## create a new vfs_fonts.js file containing your font files
-assign pdfMake.fonts in your javascript
-specify the font in your doc-definition
-### 1. create a new vfs_fonts.js containing your font files 
-- Install pdfmake npm install pdfmake
-- Go to package directory ./node_modules/pdfmake/
-- Create the examples/fonts subdirectory in your pdfmake code directory, if it doesn’t already exist.
-- Copy your fonts (and other files you wish to embed) into the examples/fonts subdirectory.
-- Run command node build-vfs.js "./examples/fonts". Or run node build-vfs.js to show help.
-- Include your new build/vfs_fonts.js file in your code (in the same way you include pdfmake.js or pdfmake.min.js).
+## 创建一个新的 `vfs_fonts.js` 文件，其中包含你的字体文件
+在你的javascript中指定pdfMake.fonts，然后在你的`doc-definition`中指定字体。
 
-The above steps embeds all files from examples/fonts (into a local key/value variable pdfMake.vfs) - not only fonts. Which means you could put images in there, run node build-vfs.js "./examples/fonts, and reference them by filename in your doc-definition object.
+### 1.新建一个 `vfs_fonts.js` 包含你字体的文件
+- 安装 pdfmake `npm install pdfmake`
+- 进入模块包目录 `./node_modules/pdfmake/`
+- 在你的pdfmake代码目录下创建`examples/fonts`子目录（如果子目录不存在的话）.
+- 复制你的字体 (以及其他嵌入的文件) 到 `examples/fonts` 子目录
+- 运行命令`node build-vfs.js "./examples/fonts"`. 或者运行`node build-vfs.js`显示帮助文档.
+- 引用新的`build/vfs_fonts.js`文件到你的代码中 (跟引用pdfmake.js 或者 pdfmake.min.js使用相同的方式).
 
-You don’t need to reference the files in examples/fonts anymore because all files have been copied to the vfs_fonts.js.
+上述步骤嵌入了`examples/fonts`的所有文件。(pdfMake.vfs将变成一个键/值变量) <br>
+不仅可以是字体. 你也可以把图片放在那里，然后运行`node build-vfs.js "./examples/fonts`，并在你的`doc-definition`对象中以文件名引用它们。
 
-Other ways:
+你不再需要引用`examples/fonts`中的文件，因为所有文件都被复制到了`vfs_fonts.js`中。.
 
-- Building font file via shell script
-- Building font file via PHP script
+其他方式:
 
-### 2. assign pdfMake.fonts in your javascript 
-In your code, before calling pdfMake.createPdf(docDefinition) set pdfMake.fonts as in the example below (notice we don’t specify paths, just filenames):
+- 通过shell脚本构建字体文件
+- 通过php脚本构建字体文件
+
+### 2. 在你的javascript中指定pdfMake.fonts 
+在你代码中调用`pdfMake.createPdf(docDefinition)` 之前设置`pdfMake.fonts` 如下面的例子（注意我们没有指定路径，只有文件名）。
 
 ```javascript
 pdfMake.fonts = {
@@ -44,7 +45,6 @@ pdfMake.fonts = {
     (...)
   },
 
-  // example of usage fonts in collection
   PingFangSC: {
     normal: ['pingfang.ttc', 'PingFangSC-Regular'],
     bold: ['pingfang.ttc', 'PingFangSC-Semibold'],
@@ -52,11 +52,11 @@ pdfMake.fonts = {
 }
 ```
 
-The keys defined here will be used as font names in your doc-definition styles.
+这里定义的键值（key）将在你的文档定义样式中作为字体名称使用。
 
-Each font-family defines 4 properties: normal, bold, italics and bolditalics referring to appropriate files (the ones you embedded from examples/fonts/). You should define all 4 components (even if they all point to the same font file).
+`font-family` 可以使用4个属性: `normal`, `bold`, `italics`,`bolditalics`
 
-By default pdfmake uses the following font structure:
+默认情况下，pdfmake使用以下的字体结构。
 
 ```javascript
 pdfMake.fonts = {
@@ -68,21 +68,21 @@ pdfMake.fonts = {
   }
 };
 ```
-Alternatively, instead of changing the global value, you can pass the fonts object directly to createPdf:
+或者，你也可以不改变全局值，而是直接将字体对象传递给`createPdf`:
 
-pdfMake.createPdf(docDefinition, null, fonts)
+**pdfMake.createPdf(docDefinition, null, fonts)**
 
 ```javascript
-// The full signature of createPdf looks like this.
-// tableLayouts, fonts and vfs are all optional - falsy values will cause
-// pdfMake.tableLayouts, pdfMake.fonts or pdfMake.vfs to be used.
+// createPdf的完整签名是这样的。.
+// tableLayouts, fonts and vfs 参数都是可选的
+// 错误参数会导致pdfMake.tableLayouts, pdfMake.fonts or pdfMake.vfs被使用
 pdfMake.createPdf(docDefinition, tableLayouts, fonts, vfs)
 ```
 
-### 3. specify the font in your doc-definition 
-pdfMake uses ‘Roboto’ as default font, so in order to use your font, you should specify it in your doc-definition object.
+### 3. 在您的文档定义中指定字体
+pdfMake 使用 ‘Roboto’ 为默认字体, 所以为了使用你的字体，你应该在你的`doc-definition`对象中指定它。.
 
-The easiest way is to set it globally in the defaultStyle
+最简单的方法是在`defaultStyle`中全局设置。
 
 ```javascript
 var docDefinition = {

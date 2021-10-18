@@ -19,7 +19,7 @@
     * [分栏](Document-definition-object/Columns.md)
     * [表格](Document-definition-object/Tables.md)
     * [列表](Document-definition-object/Lists.md)
-    * [头部和尾部](Document-definition-object/Headers_and_footers.md)
+    * [页面页脚](Document-definition-object/Headers_and_footers.md)
     * [背景层](Document-definition-object/Background_layer.md)
     * [边距](Document-definition-object/Margins.md)
     * [段落](Document-definition-object/Stack_of_paragraphs.md)
