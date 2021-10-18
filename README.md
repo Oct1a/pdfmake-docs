@@ -3,27 +3,29 @@
 
 有任何意见或建议，到这里提出 [Create New Issue](https://github.com/Oct1a/pdfmake-docs/issues/new)
 
-
+<br>
 
 ## 📖阅读地址
 
 - [PDFMake文档中文翻译](https://oct1a.github.io/pdfmake-docs/#/)
-- [PDFMake文档原文地址](https://github.com/objc-zen/objc-zen-book)
+- [PDFMake文档原文地址](https://pdfmake.github.io/docs/0.1/)
+- [PDFMake-项目地址](https://github.com/bpampuch/pdfmake)
 
+<br>
 
 
 ## ✍前言
 
 pdfmake框架一直缺乏有效的中文文档，自己又有空闲时间，就花点时间，做一下翻译。 
 
+<br>
 
 
 ## ❓如何贡献
 
 **部分译文表达可能存在不妥之处，非常欢迎各种修订建议和校对。** 请直接 fork 本仓库，所有文档内容的相关文件均在` /docs `目录下。如有需要翻译或修改纠错的内容，请直接编辑对应 md 文件，提交 pr 即可。
 
-
-
+<br>
 
 ## 📅版本历史
 
@@ -33,6 +35,7 @@ pdfmake框架一直缺乏有效的中文文档，自己又有空闲时间，就�
 
 - 2021.10.15 完成仓库搭建，选用docsify.js作为文档生成器
 
+<br>
 
 
 ## 📇目录
@@ -70,6 +73,7 @@ pdfmake框架一直缺乏有效的中文文档，自己又有空闲时间，就�
 
    * [压缩](docs/Document-definition-object/Compression.md)
 
-     
+ <br>
 
-[![Stargazers over time](https://starchart.cc/Oct1a/pdfmake-docs.svg)](https://starchart.cc/Oct1a/pdfmake-docs)
+
+<!-- ![https://starchart.cc/Oct1a/pdfmake-docs.svg](https://starchart.cc/Oct1a/pdfmake-docs) -->
