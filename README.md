@@ -29,49 +29,48 @@ pdfmake框架一直缺乏有效的中文文档，自己又有空闲时间，就�
 
 ## 📅版本历史
 
+- 2021.10.19 完成全部文档的翻译
 - 2021.10.18 完成部分文档的初译，调整了目录的部分链接和文本
-
 - 2021.10.17 完成文档结构目录构建，使用GitPages发布初始版本
-
 - 2021.10.15 完成仓库搭建，选用docsify.js作为文档生成器
 
 <br>
 
 
 ## 📇目录
-   * [样式](docs/Document-definition-object/Styling.md)
+   * [样式](https://oct1a.github.io/pdfmake-docs/#/Document-definition-object/Styling)
 
-   * [分栏](docs/Document-definition-object/Columns.md)
+   * [分栏](https://oct1a.github.io/pdfmake-docs/#/Document-definition-object/Columns)
 
-   * [表格](docs/Document-definition-object/Tables.md)
+   * [表格](https://oct1a.github.io/pdfmake-docs/#/Document-definition-object/Tables)
 
-   * [列表](docs/Document-definition-object/Lists.md)
+   * [列表](https://oct1a.github.io/pdfmake-docs/#/Document-definition-object/Lists)
 
-   * [页面页脚](docs/Document-definition-object/Headers_and_footers.md)
+   * [页面页脚](https://oct1a.github.io/pdfmake-docs/#/Document-definition-object/Headers_and_footers)
 
-   * [背景层](docs/Document-definition-object/Background_layer.md)
+   * [背景层](https://oct1a.github.io/pdfmake-docs/#/Document-definition-object/Background_layer)
 
-   * [边距](docs/Document-definition-object/Margins.md)
+   * [边距](https://oct1a.github.io/pdfmake-docs/#/Document-definition-object/Margins)
 
-   * [段落](docs/Document-definition-object/Stack_of_paragraphs.md)
+   * [段落](https://oct1a.github.io/pdfmake-docs/#/Document-definition-object/Stack_of_paragraphs)
 
-   * [图像](docs/Document-definition-object/Images.md)
+   * [图像](https://oct1a.github.io/pdfmake-docs/#/Document-definition-object/Images)
 
-   * [SVG](docs/Document-definition-object/SVGs.md)
+   * [SVG](https://oct1a.github.io/pdfmake-docs/#/Document-definition-object/SVGs)
 
-   * [链接](docs/Document-definition-object/Links.md)
+   * [链接](https://oct1a.github.io/pdfmake-docs/#/Document-definition-object/Links)
 
-   * [二维码](docs/Document-definition-object/QR_code.md)
+   * [二维码](https://oct1a.github.io/pdfmake-docs/#/Document-definition-object/QR_code)
 
-   * [目录](docs/Document-definition-object/Table_of_contents.md)
+   * [目录](https://oct1a.github.io/pdfmake-docs/#/Document-definition-object/Table_of_contents)
 
-   * [水印](docs/Document-definition-object/Watermark.md)
+   * [水印](https://oct1a.github.io/pdfmake-docs/#/Document-definition-object/Watermark)
 
-   * [页面尺寸/方向/边距](docs/Document-definition-object/Page_dimensions_orientation_and_margins.md.md)
+   * [页面尺寸/方向/边距](https://oct1a.github.io/pdfmake-docs/#/Document-definition-object/Page_dimensions_orientation_and_margins)
 
-   * [文档元数据](docs/Document-definition-object/Document_Metadata.md)
+   * [文档元数据](https://oct1a.github.io/pdfmake-docs/#/Document-definition-object/Document_Metadata)
 
-   * [压缩](docs/Document-definition-object/Compression.md)
+   * [压缩](https://oct1a.github.io/pdfmake-docs/#/Document-definition-object/Compression)
 
  <br>
 
